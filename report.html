@@ -13462,9 +13462,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
 <ul>
-<li>O cliente referente ao índice <strong>10</strong> aparenta ser um pequeno mercado devido a quantidade de produtos Grocery(Secos e molhados) e Detergents_Paper(Limpeza/Higiene)</li>
-<li>O cliente referente ao índice <strong>183</strong> aparenta ser um comercio voltado para produtos alimentícios, como exemplo um restaurante, devido a grande quantidade nos varios tipos de produto, exceto em Limpeza/Higiene </li>
-<li>O cliente referente ao índice <strong>87</strong> aparenta ser um café ou lanchonete devido a grande quantidade de produtos Delicatessen e Fresh</li>
+<li>O cliente referente ao índice <strong>10</strong> aparenta ser um pequeno mercado devido a quantidade de produtos Grocery(Secos e molhados) e Detergents_Paper(Limpeza/Higiene) que se encontra bem acima 75º percentil.</li>
+<li>O cliente referente ao índice <strong>183</strong> aparenta ser um comercio voltado para produtos alimentícios, como exemplo um restaurante, devido a grande quantidade nos varios tipos de produto, exceto em Limpeza/Higiene estando abaixo do 25º percentil</li>
+<li>O cliente referente ao índice <strong>87</strong> aparenta ser um café ou lanchonete devido a grande quantidade de produtos Delicatessen e Fresh que se encontra acima do 75º percentil.</li>
 </ul>
 
 </div>
@@ -15501,7 +15501,7 @@ Para k = 20 o score é: 0.34362404746307257</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Resposta:</strong> O modelo fornece dois segmentos. O segmento 0 mostra clientes que tem preferência na compra de alimentos perecíveis, os quais, na minha concepção, devem ser restaurantes ou lanchonetes, enquanto o segmento 1 mostra clientes que tem preferência na compra de diversos tipos de produtos com maior enfase em produtos do tipo Grocery (secos e molhados), aparentando serem mercados ou comércios em geral.</p>
+<p><strong>Resposta:</strong> O modelo fornece dois segmentos. O segmento 0 mostra clientes que tem preferência na compra de alimentos perecíveis(acima da média que é 12000.297727), os quais, na minha concepção, devem ser restaurantes ou lanchonetes, enquanto o segmento 1 mostra clientes que tem preferência na compra de diversos tipos de produtos com maior enfase em produtos do tipo Grocery (secos e molhados), Milk e Detergents_paper, todos com quantidades próximas ou acima das médias que são respectivamente 7951.277273, 5796.265909, 2881.493182, aparentando serem mercados ou comércios em geral</p>
 
 </div>
 </div>
@@ -15600,7 +15600,8 @@ Sample point 2 predicted to be in Cluster 1
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Resposta:</strong></p>
+<p><strong>Resposta:</strong>
+Ao identificar os tipos de segmentos de clientes (por meio de clustering), o atacadista poderá desenhar hipóteses mais significativas sobre o comportamento esperado dos clientes em cada segmento, antes de realizar o teste A / B. Em seguida, essas hipóteses podem ser testadas em cada segmento separadamente para encontrar conclusões mais significativas e compreender o nível de impacto em cada segmento de cliente independente.</p>
 <p>Dado o tipo de segmento do cliente, podemos inferir sobre como ele iria reagir a mudança proposta. Por exemplo, sabendo que os clientes do segmento 0 são clientes que compram bastante alimentos perecíveis, como restaurantes e lanchonetes, eles possivelmente reagiriam de forma negativa a mudança, já que é interessante ter o estoque de alimentos renovado diariamente, dado que a rotatividade é muito alta. Para os clientes do seguimento 1, como mercados, a nova abordagem de entrega deve fazer mais sentido dado que a carência maior é em produtos do tipo Grocery e Milk.</p>
 <p>Sendo assim, o varejista deve manter a entrega durante os 5 dias da semana para os clientes do segmento 0 e modificar para 3 dias semanais a entrega para os clientes do segmento 1.</p>
 <p>De qualquer forma, vale salientar que, essas suposições podem ser invalidadas durante experimentos, onde os clientes podem preferir continuar da forma que ou alterar devido suas estratégias de negócios.</p>
